@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('select').formSelect();
   $('#url_to_show').hide();
+  $('.tabs').tabs();
 
   let pArea;
   $('#frame_one').hide();

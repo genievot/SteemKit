@@ -1,0 +1,21 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.jaeven.steemkit"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.jaeven.steemkit"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.jaeven.steemkit"
+    }
+  },
+  "dependent_plugins": {}
+}
