@@ -10,9 +10,6 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.jaeven.steemkit"
     },
-    "cordova-plugin-qrscanner": {
-      "PACKAGE_NAME": "com.jaeven.steemkit"
-    },
     "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.jaeven.steemkit"
     }
