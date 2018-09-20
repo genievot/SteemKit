@@ -37,14 +37,10 @@
             <option value="three">Follow User</option>
             <option value="four">Custom</option>
             <option value="five">Other Option</option>
-
           </select>
         <label>Create QR Code For:</label>
       </div>
     </div>
-
-
-
     <!--surround the select box within a "custom-select" DIV element.
   Remember to set the width:-->
     <!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select Service</a> -->
@@ -54,27 +50,27 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="steemUsername" id="user_name" type="text" class="validate">
+          <input placeholder="Steem Username" id="user_name" type="text" class="validate" required="" aria-required="true">
           <label for="user_name">To:</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="0.00" id="amount_value" type="text" class="validate">
+          <input placeholder="0.000" id="amount_value" type="number" step="any" min="0.001" class="validate" required="" aria-required="true">
           <label for="amount_value">Amount:</label>
         </div>
       </div>
 
-
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="Memo" id="memo_type" type="text" class="validate">
+          <input placeholder="Memo" id="memo_text" type="text" class="validate" required="" aria-required="true">
           <label for="memo_type">Memo:</label>
         </div>
       </div>
 
-      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action"><span style="font-family: 'Lato', sans-serif;">Create</span>
+      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action" >
+        <span style="font-family: 'Lato', sans-serif;">Create</span>
          <i class="material-icons right">crop_free</i>
        </button>
     </div>
@@ -88,7 +84,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="witnessUsername" id="user_name" type="text" class="validate">
+          <input placeholder="Witness Username" id="witness_name" type="text" class="validate" required="" aria-required="true">
           <label for="user_name">Witness:</label>
         </div>
       </div>
@@ -107,23 +103,8 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="@username" id="user_name" type="text" class="validate">
-          <label for="user_name">To:</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input placeholder="0.00" id="amount_value" type="text" class="validate">
-          <label for="amount_value">Amount:</label>
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input placeholder="Memo" id="memo_type" type="text" class="validate">
-          <label for="memo_type">Memo:</label>
+          <input placeholder="Steem Username" id="follow_name" type="text" class="validate" required="" aria-required="true">
+          <label for="user_name">Want to follow:</label>
         </div>
       </div>
 
@@ -140,6 +121,9 @@
     </div>
 
     <div class="row center">
+      <div>
+        <img id="qrImg"/>
+      </div>
       <div class="input-field col s12">
         <p id="url_to_show">Url</p>
       </div>
@@ -158,8 +142,6 @@
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/steem.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-
-
   <script type="text/javascript" src="js/index.js"></script>
 </body>
 

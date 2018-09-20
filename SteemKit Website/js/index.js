@@ -35,11 +35,27 @@ function frameShow(frame_val) {
     });
   }
 }
-
+let url="URL";
 function createQR() {
+  if($('#frame_one').is(":visible")){  // To Transfer
+    let _name = $('#user_name').val();
+    let _amount = $('#amount_value').val();
+    let _memo = $('#memo_text').val();
+    url= "https://api.qrserver.com/v1/create-qr-code/?size=450x450&data=transfer$"+_name+"$"+_amount+"$"+_memo.replace(/&+/g,"and");
+  }
 
-  $('#url_to_show').text("https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example")
+  if($('#frame_two').is(":visible")){
+    let _name = $('#witness_name').val();
+    url= "https://api.qrserver.com/v1/create-qr-code/?size=450x450&data=witnessUpvote$"+_name;
+  }
+  if($('#frame_three').is(":visible")){
+    let _name = $('#follow_name').val();
+    url= "https://api.qrserver.com/v1/create-qr-code/?size=450x450&data=witnessUpvote$"+_name;
+  }
+
+  $('#url_to_show').text(url.split(/ +/g))
   pArea = document.getElementById("url_to_show").textContent;
+  $('#qrImg').attr('src', url.split(/ +/g))
   $('#url_to_show').show();
 }
 
