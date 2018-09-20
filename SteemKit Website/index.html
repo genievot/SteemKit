@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper white z-depth-3">
+      <a href="#" class="brand-logo text center">
+        <span style="color: #04d6a7; font-family: 'Lato', sans-serif;">
+        Steemkit
+      </span>
+    </a>
+    </div>
+  </nav>
+
+  <br>
+  <div class="container">
+    <div class="row center">
+
+      <div class="input-field col s12">
+        <select onchange="frameShow(this.value)">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="one">Transfer STEEM</option>
+            <option value="two">Steem Witness UpVote</option>
+            <option value="three">Follow User</option>
+            <option value="four">Custom</option>
+            <option value="five">Other Option</option>
+
+          </select>
+        <label>Create QR Code For:</label>
+      </div>
+    </div>
+
+
+
+    <!--surround the select box within a "custom-select" DIV element.
+  Remember to set the width:-->
+    <!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select Service</a> -->
+
+    <!-- Dropdown Structure #1 -->
+    <div class="row center card-panel hoverable" id="frame_one">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="steemUsername" id="user_name" type="text" class="validate">
+          <label for="user_name">To:</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="0.00" id="amount_value" type="text" class="validate">
+          <label for="amount_value">Amount:</label>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Memo" id="memo_type" type="text" class="validate">
+          <label for="memo_type">Memo:</label>
+        </div>
+      </div>
+
+      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action"><span style="font-family: 'Lato', sans-serif;">Create</span>
+         <i class="material-icons right">crop_free</i>
+       </button>
+    </div>
+
+
+
+
+
+    <!-- Dropdown Structure #2 -->
+    <div class="row center card-panel hoverable" id="frame_two">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="witnessUsername" id="user_name" type="text" class="validate">
+          <label for="user_name">Witness:</label>
+        </div>
+      </div>
+
+      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action"><span style="font-family: 'Lato', sans-serif;">Create</span>
+         <i class="material-icons right">crop_free</i>
+       </button>
+    </div>
+
+
+
+
+
+    <!-- Dropdown Structure #3 -->
+    <div class="row center card-panel hoverable" id="frame_three">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="@username" id="user_name" type="text" class="validate">
+          <label for="user_name">To:</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="0.00" id="amount_value" type="text" class="validate">
+          <label for="amount_value">Amount:</label>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Memo" id="memo_type" type="text" class="validate">
+          <label for="memo_type">Memo:</label>
+        </div>
+      </div>
+
+      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action"><span style="font-family: 'Lato', sans-serif;">Create</span>
+         <i class="material-icons right">crop_free</i>
+       </button>
+    </div>
+
+    <!-- After Frames -->
+    <div class="row center">
+      <div class="input-field col s12">
+        <a onclick="copyToClipboard()" class="btn" id="copy_btn">Copy QR</a>
+      </div>
+    </div>
+
+    <div class="row center">
+      <div class="input-field col s12">
+        <p id="url_to_show">Url</p>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+  <!-- Dropdown Trigger -->
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/steem.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
