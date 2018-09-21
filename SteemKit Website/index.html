@@ -37,8 +37,9 @@
             <option value="one">Transfer STEEM</option>
             <option value="two">Steem Witness UpVote</option>
             <option value="three">Follow User</option>
-            <option value="four">Custom</option>
-            <option value="five">Other Option</option>
+            <option value="four">Delegate Steem Power</option>
+            <option value="five">Upvote Post</option>
+            <option value="six">Resteem Post</option>
           </select>
         <label>Create QR Code For:</label>
       </div>
@@ -61,13 +62,6 @@
         <div class="input-field col s12">
           <input placeholder="0.000" id="amount_value" type="number" step="any" min="0.001" class="validate" required="" aria-required="true">
           <label for="amount_value">Amount:</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input placeholder="Memo" id="memo_text" type="text" class="validate" required="" aria-required="true">
-          <label for="memo_type">Memo:</label>
         </div>
       </div>
 
@@ -99,7 +93,6 @@
 
 
 
-
     <!-- Dropdown Structure #3 -->
     <div class="row center card-panel hoverable" id="frame_three">
 
@@ -115,6 +108,75 @@
        </button>
     </div>
 
+
+
+    <!-- Dropdown Structure #4 -->
+    <div class="row center card-panel hoverable" id="frame_four">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Steem Username" id="delegatee_name" type="text" class="validate" required="" aria-required="true">
+          <label for="user_name">Delegatee:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="0.000" id="amount_value" type="number" step="any" min="0.001" class="validate" required="" aria-required="true">
+          <label for="amount_value">Amount:</label>
+        </div>
+      </div>
+      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action"><span style="font-family: 'Lato', sans-serif;">Create</span>
+         <i class="material-icons right">crop_free</i>
+       </button>
+    </div>
+
+
+
+
+    <!-- Dropdown Structure #5 -->
+    <div class="row center card-panel hoverable" id="frame_five">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Steem Username" id="upvote_name" type="text" class="validate" required="" aria-required="true">
+          <label for="user_name">Author:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Steem Username" id="perml" type="text" class="validate" required="" aria-required="true">
+          <label for="user_name">Permlink:</label>
+        </div>
+      </div>
+
+
+      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action"><span style="font-family: 'Lato', sans-serif;">Create</span>
+         <i class="material-icons right">crop_free</i>
+       </button>
+    </div>
+
+
+
+    <!-- Dropdown Structure #6 -->
+    <div class="row center card-panel hoverable" id="frame_six">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Steem Username" id="resteem_name" type="text" class="validate" required="" aria-required="true">
+          <label for="user_name">Author:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Steem Username" id="perml2" type="text" class="validate" required="" aria-required="true">
+          <label for="user_name">Permlink:</label>
+        </div>
+      </div>
+      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action"><span style="font-family: 'Lato', sans-serif;">Create</span>
+         <i class="material-icons right">crop_free</i>
+       </button>
+    </div>
+
     <!-- After Frames -->
     <div class="row center">
       <div class="input-field col s12">
@@ -124,7 +186,7 @@
 
     <div class="row center">
       <div>
-        <img id="qrImg"/>
+        <img id="qrImg" class="responsive-img"/>
       </div>
       <div class="input-field col s12">
         <p id="url_to_show">Url</p>
