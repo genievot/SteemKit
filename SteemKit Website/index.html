@@ -40,6 +40,7 @@
             <option value="four">Delegate Steem Power</option>
             <option value="five">Upvote Post</option>
             <option value="six">Resteem Post</option>
+            <option value="seven">Send Bytes</option>
           </select>
         <label>Create QR Code For:</label>
       </div>
@@ -65,7 +66,7 @@
         </div>
       </div>
 
-      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action" >
+      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action">
         <span style="font-family: 'Lato', sans-serif;">Create</span>
          <i class="material-icons right">crop_free</i>
        </button>
@@ -177,6 +178,28 @@
        </button>
     </div>
 
+
+    <!-- Dropdown Structure #7 -->
+    <div class="row center card-panel hoverable" id="frame_seven">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="username" id="byteball_steem_name" type="text" class="validate" required="" aria-required="true">
+          <label for="user_name">Byteball Attested Steem User:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="1" id="bytes_value" type="number" min="1" class="validate" required="" aria-required="true">
+          <label for="amount_value">Bytes:</label>
+        </div>
+      </div>
+      <button onclick="createQR()" class="btn waves-effect waves-light btn-large" type="submit" name="action"><span style="font-family: 'Lato', sans-serif;">Create</span>
+             <i class="material-icons right">crop_free</i>
+           </button>
+    </div>
+
+
     <!-- After Frames -->
     <div class="row center">
       <div class="input-field col s12">
@@ -186,14 +209,12 @@
 
     <div class="row center">
       <div>
-        <img id="qrImg" class="responsive-img"/>
+        <img id="qrImg" class="responsive-img" />
       </div>
       <div class="input-field col s12">
         <p id="url_to_show">Url</p>
       </div>
     </div>
-
-
 
   </div>
 
