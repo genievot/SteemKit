@@ -10,8 +10,12 @@
 
 ## Feature:
 - Transfers, Donations with ease
-- Beautiful mobile app will be available for it's use
-- More to upload...
+- Beautiful mobile app available for it's use
+- Byteball Steem Username Payments Integration
+- Uvote, Follow, Resteem, Delegate all with QR
+- QR is real world entity. It's more effective in real world.
+- Post qr images anywhere
+- Developer friendly, Just split data with $ and read qr for your apps.
 
 ### Running documentation locally
 Run these commands to set up the documentation:
@@ -31,6 +35,4 @@ Steem Kit is compatible with:
 - Edge
 - IE 11+
 
-## Contributing
-Will update it sooner..
 
