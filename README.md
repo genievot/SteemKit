@@ -5,7 +5,7 @@
 <h3 align="center">Steem Kit</h3>
 
 <p align="center">
-  Steem Kit, A steem performance app for make use of blockchain with ease with the power of QR or manually with easy UI :smile:
+  Steem Kit, A steem performance app for make use of blockchain with ease with the power of QR.
   <br>
 
 ## Feature:
