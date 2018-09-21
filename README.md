@@ -36,3 +36,6 @@ Steem Kit is compatible with:
 - IE 11+
 
 
+## How to use:-
+I am not publishing app untill it becomes more amazing.
+Till then go to steemqr.jaeven.com and create qr and then go here https://github.com/genievot/SteemKit/tree/master/SteemKit%20App/steemkit/platforms/android/app/build/outputs/apk/debug and download apk-debug.apk and install it and use.
